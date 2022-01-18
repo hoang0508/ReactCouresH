@@ -18,7 +18,7 @@ const Counter = () => {
   // }, [count]);
   useEffect(() => {
     console.log("from input");
-  }, [info.lastName]);
+  }, [info.firstName]);
   return (
     <>
       {/* <div>Increment {count}</div> */}

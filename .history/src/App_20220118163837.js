@@ -8,7 +8,6 @@ import Photos from "./components/photo/Photos";
 import Photos2 from "./components/photo/Photos2";
 // import { GlobalStyle } from "./GlobalStyles";
 import Counter from "./components/Counter/Counter";
-import Timer from "./components/Time/Timer";
 // import DoubleCounter from "./components/Counter/DoubleCounter";
 // import Game from "./components/tictactoe/Game";
 // import Toggle from "./components/Toggle/Toggle";
@@ -44,8 +43,7 @@ function App() {
       </CardList> */}
       {/* <Photos /> */}
       {/* <Photos2 /> */}
-      {/* <Counter /> */}
-      <Timer />
+      <Counter />
     </>
   );
 }

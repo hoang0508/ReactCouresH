@@ -18,19 +18,19 @@ const Counter = () => {
   // }, [count]);
   useEffect(() => {
     console.log("from input");
-  }, [info.lastName]);
+  }, [info]);
   return (
     <>
       {/* <div>Increment {count}</div> */}
       <div className="p-5 flex gap-x-4 items-center">
         <input
           type="text"
-          name="lastName"
-          value={info.lastName}
+          name="firtName"
+          value={info.firstName}
           onChange={(e) =>
             setInfo({
               ...info,
-              lastName: e.target.value,
+              firstName: e.target.value,
             })
           }
         />

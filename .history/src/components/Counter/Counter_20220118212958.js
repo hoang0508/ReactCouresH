@@ -7,33 +7,14 @@ const Counter = () => {
   //     setCount((count) => count + 1);
   //   }, 1000);
   // };
-  const [info, setInfo] = useState({
-    firstName: "Nguyen",
-    lastName: "Hoang",
-  });
-  // useFect về count
-  // useEffect(() => {
-  //   // console.log(`count: ${count}`);
-  //   // setCount(count + 1);
-  // }, [count]);
   useEffect(() => {
-    console.log("from input");
-  }, [info.lastName]);
+    // console.log(`count: ${count}`);
+    setCount(count + 1);
+  }, [count]);
   return (
     <>
       {/* <div>Increment {count}</div> */}
       <div className="p-5 flex gap-x-4 items-center">
-        <input
-          type="text"
-          name="lastName"
-          value={info.lastName}
-          onChange={(e) =>
-            setInfo({
-              ...info,
-              lastName: e.target.value,
-            })
-          }
-        />
         <span className="text-lg font-bold">{count}</span>
         <button
           onClick={() => setCount(count + 1)}
