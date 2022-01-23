@@ -12,8 +12,7 @@ import "./App.scss";
 // import Header from "./components/Header";
 // import HackerNews from "./components/news/HackerNews";
 import HackerNewsWithReducer from "./components/news/HackerNewsWithReducer";
-import RefUse from "./components/Ref/RefUse";
-
+import useRef1 from "./components/useRef/useRef1";
 // import DoubleCounter from "./components/Counter/DoubleCounter";
 // import Game from "./components/tictactoe/Game";
 // import Toggle from "./components/Toggle/Toggle";
@@ -52,7 +51,7 @@ function App() {
       {/* <Counter /> */}
       {/* <HackerNews /> */}
       {/* <HackerNewsWithReducer /> */}
-      <RefUse />
+      <useRef1 />
     </>
   );
 }

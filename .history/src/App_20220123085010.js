@@ -10,10 +10,8 @@ import "./App.scss";
 // import Counter from "./components/Counter/Counter";
 // import Timer from "./components/Time/Timer";
 // import Header from "./components/Header";
-// import HackerNews from "./components/news/HackerNews";
+import HackerNews from "./components/news/HackerNews";
 import HackerNewsWithReducer from "./components/news/HackerNewsWithReducer";
-import RefUse from "./components/Ref/RefUse";
-
 // import DoubleCounter from "./components/Counter/DoubleCounter";
 // import Game from "./components/tictactoe/Game";
 // import Toggle from "./components/Toggle/Toggle";
@@ -51,8 +49,7 @@ function App() {
       {/* <Photos2 /> */}
       {/* <Counter /> */}
       {/* <HackerNews /> */}
-      {/* <HackerNewsWithReducer /> */}
-      <RefUse />
+      <HackerNewsWithReducer />
     </>
   );
 }

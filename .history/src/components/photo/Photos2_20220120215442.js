@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const getApiPhotos = async (page) => {
@@ -17,17 +17,16 @@ const Photos2 = () => {
   const [randomImage, setRandomImage] = useState([]);
   // phân trang load more
   const [nextPage, setNextPage] = useState(1);
-  const handleClickLoad = useRef({});
-  handleClickLoad.current = async () => {
+  const handleClickLoad = React.useCallback(async () => {
     const images = await getApiPhotos(nextPage);
     // data concan array
     const newPhotos = [...randomImage, ...images];
     setNextPage(nextPage + 1);
     setRandomImage(newPhotos);
-  };
+  }, []);
   useEffect(() => {
     async function fetchData() {
-      handleClickLoad.current();
+      handleClickLoad();
     }
     fetchData();
   }, []);
@@ -51,7 +50,7 @@ const Photos2 = () => {
       </div>
       <div className="text-center">
         <button
-          onClick={() => handleClickLoad.current()}
+          onClick={() => handleClickLoad()}
           className="inline-block bg-purple-600 text-white py-4 px-8"
         >
           Load more
