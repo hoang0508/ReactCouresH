@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 // import lodash from "lodash";
-const HackerNews = () => {
+const HackerNewsWithHook = () => {
   const [hits, setHits] = useState([]);
   // query => = search input
   const [query, setQuery] = useState("");
@@ -105,4 +105,4 @@ const HackerNews = () => {
   );
 };
 
-export default HackerNews;
+export default HackerNewsWithHook;

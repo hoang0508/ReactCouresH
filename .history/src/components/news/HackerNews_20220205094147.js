@@ -33,7 +33,6 @@ const HackerNews = () => {
       const response = await axios.get(url);
       // setTinme out trả về api
       setTimeout(() => {
-        // Gán isMounted.current === true
         if (isMounted.current) {
           setHits(response.data?.hits || []);
           setLoading(false);

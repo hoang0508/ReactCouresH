@@ -13,17 +13,6 @@ const HackerNews = () => {
   const [url, setUrl] = useState(
     `https://hn.algolia.com/api/v1/search?query=${query}`
   );
-  // Xử lý vấn đề mounted Component
-  const isMounted = useRef(true);
-
-  useEffect(() => {
-    //
-    //cleanup
-    return () => {
-      // mounted
-      isMounted.current = false;
-    };
-  }, []);
   // useRef ==> ko lỗi cho deps: []
   const handleFetchData = useRef();
   // fetching call API
@@ -31,13 +20,9 @@ const HackerNews = () => {
     setLoading(true);
     try {
       const response = await axios.get(url);
-      // setTinme out trả về api
       setTimeout(() => {
-        // Gán isMounted.current === true
-        if (isMounted.current) {
-          setHits(response.data?.hits || []);
-          setLoading(false);
-        }
+        setHits(response.data?.hits || []);
+        setLoading(false);
       }, 3000);
     } catch (err) {
       setLoading(false);

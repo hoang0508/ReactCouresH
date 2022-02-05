@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./App.scss";
-import HackerNewsWithHook from "./components/news/HackerNewsWithHook";
-// import HackerNews from "./components/news/HackerNews";
+import HackerNews from "./components/news/HackerNews";
 
 // JSX: Javascript XML
 // ES6
@@ -19,7 +18,7 @@ import HackerNewsWithHook from "./components/news/HackerNewsWithHook";
 //   },
 // };
 function App() {
-  // const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);
   return (
     <>
       {/* <ThemeProvider theme={theme}></ThemeProvider> */}
@@ -39,9 +38,8 @@ function App() {
         <Dropdown />
       </div> */}
       {/* <Blog /> */}
-      {/* <button onClick={() => setShow(!show)}>Toggle Button</button>
-      {show && <HackerNews />} */}
-      <HackerNewsWithHook />
+      <button onClick={() => setShow(!show)}>Toggle Button</button>
+      {show && <HackerNews />}
     </>
   );
 }
