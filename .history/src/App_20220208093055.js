@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.scss";
-import Form from "./components/Form/Form";
-// import SidebarMenu from "./components/Ref/SidebarMenu";
+import Input from "./components/Form/Input";
+import SidebarMenu from "./components/Ref/SidebarMenu";
 // import useClickOutSide from "./hooks/useClickOutSide";
 // import HackerNewsWithHook from "./components/news/HackerNewsWithHook";
 // import Dropdown from "./components/Ref/Dropdown";
@@ -46,7 +46,7 @@ function App() {
         Show menu
       </button>
       <SidebarMenu show={show} ref={nodeRef} /> */}
-      <Form />
+      <Input />
     </>
   );
 }

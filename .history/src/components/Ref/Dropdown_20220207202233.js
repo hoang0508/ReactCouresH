@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import useClickOutSide from "../../hooks/useClickOutSide";
 
 const Dropdown = () => {
@@ -15,7 +15,7 @@ const Dropdown = () => {
         >
           Selected
         </div>
-        {show && (
+        {showDropdown && (
           <div className="border border-gray-200 absolute top-full left-0 w-full bg-white">
             <div className="p-5">Javascript</div>
             <div className="p-5">ReactJs</div>

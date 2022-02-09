@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import "./App.scss";
-import Form from "./components/Form/Form";
-// import SidebarMenu from "./components/Ref/SidebarMenu";
-// import useClickOutSide from "./hooks/useClickOutSide";
-// import HackerNewsWithHook from "./components/news/HackerNewsWithHook";
-// import Dropdown from "./components/Ref/Dropdown";
+import HackerNewsWithHook from "./components/news/HackerNewsWithHook";
+import Dropdown from "./components/Ref/Dropdown";
 // import HackerNews from "./components/news/HackerNews";
 
 // JSX: Javascript XML
@@ -24,7 +21,6 @@ import Form from "./components/Form/Form";
 // };
 function App() {
   // const [show, setShow] = useState(false);
-  // const { show, setShow, nodeRef } = useClickOutSide();
   return (
     <>
       {/* <ThemeProvider theme={theme}></ThemeProvider> */}
@@ -36,17 +32,18 @@ function App() {
       {/* <Card2 /> */}
       {/* <CardList>
         <CardTailwind primary={true} fontSize="text-[20px]" />
+      </CardList> */}
+      {/* <Photos /> */}
+      {/* <Photos2 /> */}
+      {/* <Counter /> */}
+      {/* <div className="p-5">
+        <Dropdown />
+      </div> */}
+      {/* <Blog /> */}
+      {/* <button onClick={() => setShow(!show)}>Toggle Button</button>
       {show && <HackerNews />} */}
       {/* <HackerNewsWithHook /> */}
-      {/* <Dropdown /> */}
-      {/* <button
-        onClick={() => setShow(!show)}
-        className="inline-block m-3 p-3 rounded-lg text-white bg-green-400"
-      >
-        Show menu
-      </button>
-      <SidebarMenu show={show} ref={nodeRef} /> */}
-      <Form />
+      <Dropdown />
     </>
   );
 }
