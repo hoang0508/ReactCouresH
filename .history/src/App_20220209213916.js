@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.scss";
-// import Form from "./components/Form/Form";
+import Form from "./components/Form/Form";
 import MovieSearchApp from "./components/Form/MovieSearchApp";
 // import SidebarMenu from "./components/Ref/SidebarMenu";
 // import useClickOutSide from "./hooks/useClickOutSide";
