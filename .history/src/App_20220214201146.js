@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.scss";
 import SignUpFormFinal from "./components/Form/SignUpFormFinal";
-// import MovieSearchApp from "./components/Form/MovieSearchApp";
+
 // JSX: Javascript XML
 // ES6
 // Babel
@@ -41,8 +41,8 @@ function App() {
         Show menu
       </button>
       <SidebarMenu show={show} ref={nodeRef} /> */}
-      <SignUpFormFinal />
-      {/* <MovieSearchApp /> */}
+      {/* <SignUpFormFinal /> */}
+       <
     </>
   );
 }

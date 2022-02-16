@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.scss";
 import SignUpFormFinal from "./components/Form/SignUpFormFinal";
 // import MovieSearchApp from "./components/Form/MovieSearchApp";

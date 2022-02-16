@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.scss";
-import SignUpFormFinal from "./components/Form/SignUpFormFinal";
-// import MovieSearchApp from "./components/Form/MovieSearchApp";
+// import Form from "./components/Form/Form";
+import SignUpFormV2 from "./components/Form/SignUpFormV2";
+// import SidebarMenu from "./components/Ref/SidebarMenu";
+// import useClickOutSide from "./hooks/useClickOutSide";
+// import HackerNewsWithHook from "./components/news/HackerNewsWithHook";
+// import Dropdown from "./components/Ref/Dropdown";
+// import HackerNews from "./components/news/HackerNews";
+
 // JSX: Javascript XML
 // ES6
 // Babel
@@ -41,8 +47,7 @@ function App() {
         Show menu
       </button>
       <SidebarMenu show={show} ref={nodeRef} /> */}
-      <SignUpFormFinal />
-      {/* <MovieSearchApp /> */}
+      <SignUpFormV2 />
     </>
   );
 }
