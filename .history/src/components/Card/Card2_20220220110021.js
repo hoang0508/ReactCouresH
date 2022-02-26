@@ -12,6 +12,7 @@ const StyledCard = styled.div`
     height: 400px;
     width: 100%;
     border-radius: 8px;
+
     img {
       display: block;
       width: 100%;

@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.scss";
-
+import SignUpFormHook from "./components/Form/SignUpFormHook";
 // JSX: Javascript XML
 // ES6
 // Babel
@@ -40,6 +40,7 @@ function App() {
         Show menu
       </button>
       <SidebarMenu show={show} ref={nodeRef} /> */}
+      <SignUpFormHook />
     </>
   );
 }

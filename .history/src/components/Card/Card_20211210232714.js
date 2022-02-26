@@ -85,6 +85,7 @@ const CartAmount = styled.span`
     #ffb86c 64.35%,
     #fc2872 119.91%
   );
+  /*scp */
   ${(props) =>
     props.secondary &&
     css`
