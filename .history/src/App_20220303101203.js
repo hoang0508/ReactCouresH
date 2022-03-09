@@ -1,9 +1,5 @@
 import React from "react";
-import { AuthProvider } from "./components/contexts/auth-context";
 import { CountProvider, useCount } from "./components/contexts/countContext";
-import { GellaryProvider } from "./components/contexts/gellary-context";
-import CartList from "./components/GellaryPhotos/CartList";
-import PhotoList from "./components/GellaryPhotos/PhotoList";
 import HeaderMain from "./components/HeaderMain";
 // import Modal from "./components/Modal/Modal";
 
@@ -19,7 +15,7 @@ const Counter = () => {
   return (
     <button
       onClick={increment}
-      className="p-4 font-semibold text-white bg-purple-500 rounded-lg"
+      className="p-4 rounded-lg text-white font-semibold bg-purple-500"
     >
       Increment count
     </button>
@@ -28,19 +24,13 @@ const Counter = () => {
 const App = () => {
   return (
     <>
-      {/* <div className="flex items-center justify-center gap-5 p-5">
+      {/* <div className="p-5 flex justify-center items-center gap-5">
       <CountProvider>
         <CounterDisplay />
         <Counter />
       </CountProvider>
     </div> */}
-      <AuthProvider>
-        <GellaryProvider>
-          <HeaderMain />
-          <PhotoList />
-          <CartList />
-        </GellaryProvider>
-      </AuthProvider>
+      <HeaderMain />
     </>
   );
 };

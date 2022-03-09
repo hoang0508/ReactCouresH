@@ -1,9 +1,6 @@
 import React from "react";
 import { AuthProvider } from "./components/contexts/auth-context";
 import { CountProvider, useCount } from "./components/contexts/countContext";
-import { GellaryProvider } from "./components/contexts/gellary-context";
-import CartList from "./components/GellaryPhotos/CartList";
-import PhotoList from "./components/GellaryPhotos/PhotoList";
 import HeaderMain from "./components/HeaderMain";
 // import Modal from "./components/Modal/Modal";
 
@@ -35,11 +32,7 @@ const App = () => {
       </CountProvider>
     </div> */}
       <AuthProvider>
-        <GellaryProvider>
-          <HeaderMain />
-          <PhotoList />
-          <CartList />
-        </GellaryProvider>
+        <HeaderMain />
       </AuthProvider>
     </>
   );
