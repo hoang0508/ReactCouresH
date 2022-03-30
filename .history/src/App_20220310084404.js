@@ -34,7 +34,7 @@ const App = () => {
           <Route path="/" element={<div>Home page</div>}></Route>
           <Route path="/blog" element={<BlogPage />}></Route>
           <Route
-            path="/blog/:slug"
+            path="/blog:slug"
             element={<BlogPageDetails></BlogPageDetails>}
           ></Route>
           <Route path="/profile" element={<ProfilePage />}></Route>

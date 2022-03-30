@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import BlogPage from "./components/BlogPage";
-import BlogPageDetails from "./components/BlogPageDetails";
 import Nav from "./components/Nav";
 import ProfilePage from "./components/ProfilePage";
 
@@ -33,13 +32,9 @@ const App = () => {
         <Route path="/" element={<Nav></Nav>}>
           <Route path="/" element={<div>Home page</div>}></Route>
           <Route path="/blog" element={<BlogPage />}></Route>
-          <Route
-            path="/blog/:slug"
-            element={<BlogPageDetails></BlogPageDetails>}
-          ></Route>
           <Route path="/profile" element={<ProfilePage />}></Route>
+          <Route path="*" element={<div>This is 404 not found</div>}></Route>
         </Route>
-        <Route path="*" element={<div>This is 404 not found</div>}></Route>
       </Routes>
     </>
   );
