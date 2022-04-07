@@ -33,13 +33,41 @@
   transform: scale(0.5);
 }
 .zoom-enter-active .content {
-  opacity: 2;
-  transform: scale(2);
+  opacity: 1;
+  transform: scale(1);
 }
 .zoom-exit .content {
   opacity: 1;
+  transform: scale(0);
 }
 .zoom-exit-active .content {
   opacity: 0;
   transform: scale(0.5);
+}
+
+// Css Transition // Tootip // Portal
+.fade-enter .tooltip {
+  opacity: 0;
+}
+.fade-enter-active .tooltip {
+  opacity: 1;
+}
+.fade-exit .tooltip {
+  opacity: 1;
+}
+.fade-exit-active .tooltip {
+  opacity: 0;
+}
+
+.toggle-input {
+  /* visually hidden but still accessible */
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }

@@ -5,19 +5,15 @@ function useTogle() {
   const [on, setOn] = useState(false);
   const toggle = () => setOn(!on);
   // Props getter
-  function getToggleProps({ onClick, ...rest }) {
+  function getToggleProps(props) {
     return {
-      onClick: () => {
-        onClick && onClick();
-        toggle();
-      },
-      ...rest,
+      onclick: toggle,
+      ...props,
     };
   }
   return {
     on,
     toggle,
-    getToggleProps,
     // Props collection
     // toggleProps: {
     //   onClick: toggle,
@@ -28,17 +24,19 @@ function useTogle() {
 // Props getter
 const App = () => {
   const { on, toggleProps, getToggleProps } = useTogle();
+  console.log(
+    "🚀 ~ file: App.js ~ line 27 ~ App ~ getToggleProps",
+    getToggleProps
+  );
   // console.log("🚀 ~ file: App.js ~ line 19 ~ App ~ p", toggleProps);
   return (
     <>
       {/* <Switch on={on} {...toggleProps} /> */}
-      <Switch {...getToggleProps({ on })} />
+      <Switch {...getToggleProps({})} />
       <hr />
       <button
         aria-label="custom-button"
-        {...getToggleProps({
-          onClick: () => console.info("onButtonToggle"),
-        })}
+        {...toggleProps}
         // onClick={() => {
         //   console.log("onButton");
         //   toggle();

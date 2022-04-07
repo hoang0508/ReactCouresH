@@ -28,6 +28,10 @@ function useTogle() {
 // Props getter
 const App = () => {
   const { on, toggleProps, getToggleProps } = useTogle();
+  console.log(
+    "🚀 ~ file: App.js ~ line 27 ~ App ~ getToggleProps",
+    getToggleProps
+  );
   // console.log("🚀 ~ file: App.js ~ line 19 ~ App ~ p", toggleProps);
   return (
     <>
@@ -35,6 +39,7 @@ const App = () => {
       <Switch {...getToggleProps({ on })} />
       <hr />
       <button
+        onCl
         aria-label="custom-button"
         {...getToggleProps({
           onClick: () => console.info("onButtonToggle"),

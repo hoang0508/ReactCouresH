@@ -5,13 +5,10 @@ function useTogle() {
   const [on, setOn] = useState(false);
   const toggle = () => setOn(!on);
   // Props getter
-  function getToggleProps({ onClick, ...rest }) {
+  function getToggleProps(props) {
     return {
-      onClick: () => {
-        onClick && onClick();
-        toggle();
-      },
-      ...rest,
+      onClick: toggle,
+      ...props,
     };
   }
   return {
@@ -28,6 +25,10 @@ function useTogle() {
 // Props getter
 const App = () => {
   const { on, toggleProps, getToggleProps } = useTogle();
+  console.log(
+    "🚀 ~ file: App.js ~ line 27 ~ App ~ getToggleProps",
+    getToggleProps
+  );
   // console.log("🚀 ~ file: App.js ~ line 19 ~ App ~ p", toggleProps);
   return (
     <>

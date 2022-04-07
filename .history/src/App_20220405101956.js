@@ -28,6 +28,10 @@ function useTogle() {
 // Props getter
 const App = () => {
   const { on, toggleProps, getToggleProps } = useTogle();
+  console.log(
+    "🚀 ~ file: App.js ~ line 27 ~ App ~ getToggleProps",
+    getToggleProps
+  );
   // console.log("🚀 ~ file: App.js ~ line 19 ~ App ~ p", toggleProps);
   return (
     <>
