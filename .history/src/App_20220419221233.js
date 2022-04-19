@@ -10,7 +10,7 @@ const App = () => {
         };
 
       default:
-        return useCounter.reducer(state, action);
+        break;
     }
   };
   const { count, handleDecrement, handleIncrement } = useCounter(
