@@ -14,7 +14,6 @@ const options = [
 const App = () => {
   const [job, setJob] = useState("");
   const [filter, setFilter] = useState("");
-  console.log("🚀 ~ file: App.js ~ line 17 ~ App ~ filter", filter);
   const handleSelectJob = (newJob) => {
     setJob(newJob);
   };

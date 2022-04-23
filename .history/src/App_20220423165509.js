@@ -14,11 +14,10 @@ const options = [
 const App = () => {
   const [job, setJob] = useState("");
   const [filter, setFilter] = useState("");
-  console.log("🚀 ~ file: App.js ~ line 17 ~ App ~ filter", filter);
+  console.log("App ~ filter", filter);
   const handleSelectJob = (newJob) => {
     setJob(newJob);
   };
-  // console.log(job);
   return (
     <div>
       {/* <Dropdown
@@ -30,16 +29,15 @@ const App = () => {
       ></Dropdown> */}
       <Dropdown
         placeholder={`${job || "Select your job"}`}
-        inputPlaholder="Search your jobs..."
         onClick={handleSelectJob}
         onChange={(e) => setFilter(e.target.value)}
       >
         <div className="options border border-gray-300 rounded">
-          <Dropdown.Search></Dropdown.Search>
+          <Dropdown.Search placeholder="Search your jobs..."></Dropdown.Search>
           {options.map((option) => (
             <Dropdown.Option key={option.title}>
               <span>{option.title}</span>
-              {/* <Dropdown.IconCheck></Dropdown.IconCheck> */}
+              <Dropdown.IconCheck></Dropdown.IconCheck>
             </Dropdown.Option>
           ))}
         </div>
